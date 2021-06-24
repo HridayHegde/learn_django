@@ -1,0 +1,9 @@
+{% if userlist %}
+    <ul>
+    {% for x in userlist %}
+        <li>{{ x.1 }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <h1>NOPE</h1>
+{% endif %}
