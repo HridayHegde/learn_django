@@ -1,0 +1,15 @@
+<html>
+    <form action = "{% url 'polls:adduser'%}" method = "POST">
+        {% csrf_token %}
+        <fieldset>
+            <h1>Name</h1><br><input name="uname" type="text"/><br>
+            <h1>Password</h1><br><input name="pass" type="password"><br>
+            <legend><h1>Select a User</h1></legend>
+            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+            {% for users in userlist %}
+                <input type="radio" name="selecteduser" id="choice{{ forloop.counter }}" value="{{ users.username }}">
+            {% endfor %}
+        </fieldset>
+        <input type="submit" value="Add User">
+    </form>
+</html>

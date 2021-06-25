@@ -14,3 +14,13 @@
 ``` python manage.py shell ``` To access the django ORM shell
 
 ``` python manage.py createsuperuser ``` Create Admin
+
+``` {% url 'detail' question.id %} ``` Can be used to assign dynamic urls
+
+``` self.assertIs() ``` Testing
+
+``` {% load static %} ``` to load assets folder
+
+``` {% static 'polls/style.css' %} ``` Sample asset access
+
+``` https://medium.com/swlh/build-your-first-rest-api-with-django-rest-framework-e394e39a482c ``` For REST API
